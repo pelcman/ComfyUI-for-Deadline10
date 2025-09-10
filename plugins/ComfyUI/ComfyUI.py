@@ -36,6 +36,8 @@ except ImportError:
 A Deadline plugin for rendering ComfyUI workflows. Handles workflow submission, 
 progress monitoring, seed manipulation, batch processing, and multi-GPU support.
 Supports both existing ComfyUI instances and launching new ones.
+----
+Kazuki Yoshida[yoshida_k@gooneys.co.jp]
 """
 
 # Constants

@@ -2,9 +2,9 @@
 
 """
 ComfyUI Deadline Submission Node
-by Dominik Bargiel dominikbargiel97@gmail.com
-
 A ComfyUI custom node for submitting workflows to Thinkbox Deadline render farm.
+----
+Kazuki Yoshida[yoshida_k@gooneys.co.jp]
 """
 
 import os

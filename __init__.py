@@ -1,6 +1,5 @@
 """
 ComfyUI Deadline Plugin
-
 A comprehensive plugin for integrating ComfyUI workflows with Thinkbox Deadline render farm management.
 """
 
