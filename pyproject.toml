@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ComfyUI-for-Deadline10"
+version = "1.1.0"
+description = "ComfyUI plugin for submitting workflows to Thinkbox Deadline10 for distributed rendering"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Kazuki Yoshida", email = "yoshida_k@gooneys.co.jp"}
+]
+keywords = ["comfyui", "deadline", "rendering", "distributed", "workflow", "manager", "plugin"]
+classifiers = [
+    "Development Status :: 5 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 2.9",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=2.7"
+dependencies = []
+
+[tool.setuptools]
+# For flat structure with .py files in root
+py-modules = ["deadline_submit", "deadline_api", "__init__"]
+
+[comfyui]
+PublisherId = "Kazuki Yoshida"
+DisplayName = "ComfyUI Deadline Plugin"
+Icon = "" 
+
+[tool.comfy]
+PublisherId = "Kazuki Yoshida"
+DisplayName = "ComfyUI Deadline Plugin"
+Icon = ""
+

@@ -1,0 +1,54 @@
+# ComfyUI Deadline Plugin
+
+Submit ComfyUI workflows to Thinkbox Deadline RenderFarm.
+This Repository is a Python2/3 compatible implementation for Deadline 10.
+
+## Features
+
+- Submit ComfyUI workflows directly to Deadline
+- Batch rendering with seed variation
+- Real-time progress monitoring via Deadline Monitor
+- Configurable pools, groups, and priorities
+
+## Installation
+
+### ComfyUI Setup
+1. Copy this Repository to your ComfyUI's `ComfyUI/custom_nodes/` directory
+2. Restart ComfyUI
+
+### Deadline Plugin Setup
+Copy `plugins/ComfyUI/` to your Deadline Repository's `custom/plugins/` directory and restart Deadline services.
+
+## Usage
+
+1. Add "Submit to Deadline" node to your workflow
+2. Configure job settings (name, priority, pool, etc.)
+3. Execute workflow
+4. Monitor progress in Deadline Monitor
+
+### Key Settings
+
+- **batch_count**: Number of tasks (1-100)
+- **change_seeds_per_task**: Randomize seeds for different outputs
+- **priority**: Job priority (0-100)
+- **pool/group**: Deadline worker assignment
+
+## Configuration
+
+### Model Paths (Optional)
+For render farms with shared storage, 
+copy `example_extra_model_paths.yaml` to your ComfyUI
+installation as `extra_model_paths.yaml` and update paths.
+
+## How It Works
+
+1. Captures current ComfyUI workflow
+2. Submits to Deadline with proper configuration
+3. Workers execute workflow via ComfyUI API
+4. Progress reported through Deadline Monitor
+
+## Requirements
+
+- ComfyUI installation on worker machines
+- Thinkbox Deadline
+- No additional Python dependencies (uses standard library)
